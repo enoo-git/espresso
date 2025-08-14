@@ -243,7 +243,7 @@ function endQuiz() {
     }else if(score >= 21 && score < 29){
         customMessage.textContent = "Nice espresso ! Almost a rollup master. One more shot ?";
     }else if(score > 29){
-        customMessage.textContent = "Perfect espresso, legendary Brewer ! Ready for the mainnet?";
+        customMessage.textContent = "Perfect espresso, legendary Brewer ! Ready for TGE?";
     }
 
     const tweetText = encodeURIComponent(
