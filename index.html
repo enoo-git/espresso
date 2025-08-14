@@ -11,12 +11,12 @@
 <div id="quiz-container">
     <h1>Espresso rally</h1>
     <p> Rules :
-        You have 60 seconds to answer as many questions as you can.
+        You have 3 minutes to answer as many questions as you can.
         <br/>
         Click the Start button to begin the timer.</p>
         <br/>
         <span>Answer with "A", "B", "C" only.</span>
-    <div id="timer">60 seconds</div>
+    <div id="timer">3 minutes</div>
     <div id="question"></div>
     <button id="start-btn">Start</button>
     <input type="text" id="answer-input" placeholder="Your answer" autocomplete="off"/>
@@ -26,7 +26,7 @@
 <!-- Modal de fin -->
 <div id="result-modal" class="modal hidden">
     <div class="modal-content">
-        <h2>Time ended, good job !</h2>
+        <h2 id="custom-message"></h2>
         <p id="final-score-text"></p>
         <button id="share-btn">Share on X</button>
         <a id="restart-btn">Try again</a>
