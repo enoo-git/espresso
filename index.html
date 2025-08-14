@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espresso rally</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="quiz-container">
+    <h1>Espresso rally</h1>
+    <p> Rules :
+        You have 60 seconds to answer as many questions as you can.
+        <br/>
+        Click the Start button to begin the timer.</p>
+        <br/>
+        <span>Answer with "A", "B", "C" only.</span>
+    <div id="timer">60 seconds</div>
+    <div id="question"></div>
+    <button id="start-btn">Start</button>
+    <input type="text" id="answer-input" placeholder="Your answer" autocomplete="off"/>
+    <input type="submit" value="Submit" id="submit-btn"/>
+    <div id="score"></div>
+</div>
+<!-- Modal de fin -->
+<div id="result-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Time ended, good job !</h2>
+        <p id="final-score-text"></p>
+        <button id="share-btn">Share on X</button>
+        <a id="restart-btn">Try again</a>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
