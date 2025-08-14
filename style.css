@@ -147,7 +147,7 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
- 
+
 
 @media(max-width: 798px){
     body {
@@ -173,4 +173,15 @@ button {
     .modal-content h2 {
         font-size: 1.3em;
     }
+}
+
+.footer {
+    position: fixed;
+    bottom:0;
+    color:#fff;
+    text-align: center;
+    left:50%;
+    font-size:20px;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
 }
