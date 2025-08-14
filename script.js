@@ -126,7 +126,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let startTime;
 let timerInterval;
-const totalDuration = 60 * 1000; // 45 secondes en millisecondes
+const totalDuration = 180 * 1000; // 45 secondes en millisecondes
 
 // Éléments du DOM
 const timerElement = document.getElementById("timer");
@@ -135,6 +135,7 @@ const inputElement = document.getElementById("answer-input");
 const submitBtn = document.getElementById("submit-btn");
 const scoreElement = document.getElementById("score");
 const startBtn = document.getElementById("start-btn");
+const customMessage = document.getElementById('custom-message');
 
 // Modal
 const modal = document.getElementById("result-modal");
@@ -234,6 +235,16 @@ function endQuiz() {
 
     const scoreText = `Your score : ${score}`;
     finalScoreText.textContent = scoreText;
+
+    if(score < 13) {
+        customMessage.textContent = "Cold coffee ! Not a Brewer yet. Retry those rollups !";
+    }else if(score >= 13 && score < 21){
+        customMessage.textContent = "Lukewarm espresso ! Dig into shared sequencing, future Brewer.";
+    }else if(score >= 21 && score < 29){
+        customMessage.textContent = "Nice espresso ! Almost a rollup master. One more shot ?";
+    }else if(score > 29){
+        customMessage.textContent = "Perfect espresso, legendary Brewer ! Ready for the mainnet?";
+    }
 
     const tweetText = encodeURIComponent(
         `My Espresso rally score is ${score}\n\nTry it here: \n\n https://enoo-git.github.io/espresso/\n\n@InvestingDams @EspressoSys`
